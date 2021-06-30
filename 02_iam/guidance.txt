@@ -1,0 +1,5 @@
+Create IAM role for power users
+Create test users
+Attach policy to users for pw change
+Attach policy to users for role assumption
+Validate user credentials and role assumption

@@ -1,0 +1,4 @@
+Create event-based Config rule
+Create scheduled Config rule
+Create Config rule with active remediation
+Create EventBridge rule for GuardDuty

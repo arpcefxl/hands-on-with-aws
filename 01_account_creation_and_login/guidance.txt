@@ -1,0 +1,4 @@
+https://phd.aws.amazon.com/phd/home#/dashboard/open-issues
+https://console.aws.amazon.com/iam/home?region=us-east-1#/account_settings
+https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Settings:tab=zones
+https://console.aws.amazon.com/billing/home?region=us-east-1#/preferences

@@ -1,0 +1,4 @@
+Explore the Organizations dashboard
+Discuss Organizations policies
+Create new SCP to deny EC2 termination
+Validate the SCP

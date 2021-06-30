@@ -1,0 +1,5 @@
+Explore Security Hub dashboard
+https://aws.amazon.com/blogs/security/automated-response-and-remediation-with-aws-security-hub/
+Explore Audit Manager
+Explore Config dashboard and compliance
+Explore SSM Patch manager and compliance
