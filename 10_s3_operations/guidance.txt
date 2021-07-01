@@ -1,0 +1,4 @@
+Use CLI to create S3 bucket with full configuration
+Explore monitoring options
+Explore S3 Batch options
+

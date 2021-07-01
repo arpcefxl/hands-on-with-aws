@@ -1,0 +1,19 @@
+# This demo will create a patch group and a patch baseline that can be
+# applied to Amazon Linux 2 instances as the default for the region
+
+# Navigate to the SSM service dashboard and click on Patch Manager
+
+# Click on View Predefined Patch Baselines
+# Click on Create Patch Baseline
+# Name: amazon-linux2-test-baseline
+# OS: Amazon Linux 2
+# Select product, classification and severity as required
+
+# Click on Create Patch Baseline
+
+# Click on the Patch baselines tab
+# Search for test-baseline
+# Click on the radio button next to the new baseline
+# Click on Actions, then Modify Patch Groups
+# Enter "testgroup" and click on Add
+# Click Close

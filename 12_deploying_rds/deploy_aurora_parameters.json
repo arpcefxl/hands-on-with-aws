@@ -1,0 +1,23 @@
+[
+  {
+    "ParameterKey": "DBUSER",
+    "ParameterValue": "root"
+  },
+  {
+    "ParameterKey": "DBPASS",
+    "ParameterValue": "changeme"
+  },
+  {
+    "ParameterKey": "INSTANCETYPE",
+    "ParameterValue": "db.r5.large"
+  },
+  {
+    "ParameterKey": "SGID",
+    "ParameterValue": "sg-ddd4a599"
+  },
+  {
+    "ParameterKey": "SUBNETLIST",
+    "ParameterValue": "subnet-103b055a, subnet-c9305eae, subnet-4c760362"
+
+  }
+]

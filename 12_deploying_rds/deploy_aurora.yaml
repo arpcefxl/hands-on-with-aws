@@ -1,0 +1,66 @@
+---
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: A simple deployment of Aurora MySQL
+
+Parameters:
+  DBUSER:
+    AllowedPattern: "[a-zA-Z0-9]+"
+    Description: The database admin account user name, between 1 to 16 alphanumeric characters.
+    MaxLength: '16'
+    MinLength: '1'
+    Type: String
+  DBPASS:
+    AllowedPattern: "[a-zA-Z0-9]+"
+    Description: The database admin account password, between 8 to 41 alphanumeric characters.
+    MaxLength: '41'
+    MinLength: '8'
+    Type: String
+  SUBNETLIST:
+    Type: List<AWS::EC2::Subnet::Id>
+    Description: a list of 3 subnets to be used to create a Database Subnet Group
+  INSTANCETYPE:
+    Type: String
+    Description: the Aurora DB instance type
+    Default : "db.t3.micro"
+  SGID:
+    Type: List<AWS::EC2::SecurityGroup::Id>
+
+Metadata:
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      - Label:
+          default: Database Configuration
+        Parameters:
+          - DBUSER
+          - DBPASS
+    ParameterLabels:
+      DBUSER:
+        default: Database Username
+      DBPASS:
+        default: Database Password
+
+Resources:
+  DatabaseSubnetGroup:
+    Type: AWS::RDS::DBSubnetGroup
+    Properties:
+      DBSubnetGroupDescription: CloudFormation managed DB subnet group.
+      SubnetIds: !Ref "SUBNETLIST"
+
+  DBCluster:
+    Type: AWS::RDS::DBCluster
+    Properties:
+      Engine: aurora
+      MasterUsername: !Ref "DBUSER"
+      MasterUserPassword: !Ref "DBPASS"
+      BackupRetentionPeriod: 1
+      DBSubnetGroupName: !Ref "DatabaseSubnetGroup"
+      VpcSecurityGroupIds: !Ref "SGID"
+
+  DatabasePrimaryInstance:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      Engine: aurora
+      DBClusterIdentifier: !Ref "DBCluster"
+      DBInstanceClass: !Ref "INSTANCETYPE"
+      DBSubnetGroupName: !Ref "DatabaseSubnetGroup"

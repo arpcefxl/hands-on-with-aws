@@ -1,0 +1,3 @@
+Deploy VPCs in different region (Terraform)
+Connect VPCs using peering connections
+Connect VPCs using Transit GW
