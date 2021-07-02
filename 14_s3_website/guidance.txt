@@ -1,0 +1,4 @@
+Create and configure S3 bucket
+Deploy static page to S3
+Create and configure CloudFront distribution
+

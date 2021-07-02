@@ -1,0 +1,2 @@
+Create monitoring workflow notifying via SNS for any termination of EC2 instances
+Use EventBridge -> SNS with rules based on CloudTrail

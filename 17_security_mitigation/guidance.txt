@@ -1,0 +1,3 @@
+Install Inspector Agent on EC2
+Implement Inspector Assessment Run
+

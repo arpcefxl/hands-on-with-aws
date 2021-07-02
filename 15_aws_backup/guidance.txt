@@ -1,0 +1,8 @@
+# Navigate to the Backup console
+# Create a Vault
+# Create a Backup Plan
+#   Backup in local region
+#   Backup and copy to remote region
+#   Two separate retention periods
+# Add a resource assignment to the newly created plan
+
