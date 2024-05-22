@@ -2,7 +2,7 @@
 
 #Set all the variables
 BUCKET1=$1
-REGION=$3
+REGION=$2
 
 #Create the two buckets
 aws s3api create-bucket --bucket $BUCKET1 --region $REGION
